@@ -1,9 +1,10 @@
 import ProductList from "./ProductList";
 import Header from "./Header";
 import ShoppingCart from "./ShoppingCart";
+import React, { useState } from 'react';
 
 const Eshop = () => {
-  const products = [
+  const [products, setProducts] = useState([
     {
       sku: 1,
       stock: 10,
@@ -28,9 +29,9 @@ const Eshop = () => {
         "https://d1eh9yux7w8iql.cloudfront.net/product_images/338084_7fcba852-8e68-44da-97d1-a10b74a1349f.jpg",
       price: 1300
     }
-  ];
+  ]);
 
-  const cart = [
+  const [cart, setCart] = useState([
     {
       sku: 1,
       qty: 2,
@@ -43,7 +44,7 @@ const Eshop = () => {
       name: "iPad Pro",
       price: 1300
     }
-  ];
+  ]);
 
   return (
     <>
